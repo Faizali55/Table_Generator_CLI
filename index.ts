@@ -1,6 +1,11 @@
-import inquirer from "inquirer";
+#! /usr/bin/env node
 
-console.log("\n<<<<< Wellcome To The FaizCode Table-Generator-CLi >>>>>\n");
+import inquirer from "inquirer";
+import chalk from "chalk";
+
+console.log(
+  chalk.yellow("\n<<<<< Wellcome To The FaizCode Table-Generator-CLi >>>>>\n")
+);
 
 let loop = true;
 
@@ -16,12 +21,14 @@ while (loop) {
   let myNumber = myInput.num;
 
   if (myNumber) {
-    console.log(`\nHere Is The Table Of ${myNumber} `);
+    console.log(chalk.yellow(`\nHere Is The Table Of ${myNumber} `));
     for (let i = 1; i <= 10; i++) {
-      console.log(`\n${myNumber} x ${i} = ${myNumber * i}`);
+      console.log(chalk.green(`\n${myNumber} x ${i} = ${myNumber * i}`));
     }
   } else {
-    console.log("\nPlease Enter Your Number In Numerical Form\n");
+    console.log(
+      chalk.redBright("\nPlease Enter Your Number In Numerical Form\n")
+    );
   }
 
   let moreTable = await inquirer.prompt([
@@ -35,6 +42,6 @@ while (loop) {
 
   if (!moreTable.more) {
     loop = false;
-    console.log("\nThank You For Using This Table Generator\n");
+    console.log(chalk.magenta("\nThank You For Using This Table Generator\n"));
   }
 }

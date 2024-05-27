@@ -1,9 +1,10 @@
 {
-  "name": "table_generator_cli",
+  "name": "ffaiz-table-generator-cli",
   "version": "1.0.0",
   "description": "This is Table Printing CLI Project, User Can Enter Any Number, Table Will Be Printed To That Number.",
   "main": "index.js",
   "type": "module",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
